@@ -10,7 +10,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
-const val getAndroidID = "getAndroidId"
+const val getUUID = "getUUID"
 const val getAppVersionName = "getAppVersionName"
 const val getAppVersionCode = "getAppVersionCode"
 const val isAppDebug = "isAppDebug"
@@ -34,7 +34,7 @@ class FlutterUtilsPlugin : MethodCallHandler {
         Log.d("call.method", "method: $method")
         when (method){
             getAppVersionName -> result.success(AppUtils.getAppVersionName())
-            getAndroidID -> result.success(DeviceUtils.getAndroidID())
+            getUUID -> result.success(DeviceUtils.getAndroidID())
             getAppVersionCode -> result.success(AppUtils.getAppVersionCode().toString())
             isAppDebug -> result.success(AppUtils.isAppDebug())
             else -> result.notImplemented()

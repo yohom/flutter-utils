@@ -5,8 +5,8 @@ import 'package:flutter/services.dart';
 class FlutterUtils {
   static const MethodChannel _channel = const MethodChannel('flutter_utils');
 
-  static Future<String> get androidId async {
-    return await _channel.invokeMethod('getAndroidId');
+  static Future<String> get uuid async {
+    return await _channel.invokeMethod('getUUID');
   }
 
   static Future<String> get appVersionName async {

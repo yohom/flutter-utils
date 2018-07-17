@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
     try {
       appVersionName = await FlutterUtils.appVersionName;
       appVersionCode = await FlutterUtils.appVersionCode;
-      androidId = await FlutterUtils.androidId;
+      androidId = await FlutterUtils.uuid;
       isAppDebug = await FlutterUtils.isAppDebug;
     } on PlatformException {
       appVersionName = 'Failed to get platform version.';
